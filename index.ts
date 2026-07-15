@@ -86,7 +86,7 @@ const verifyToken = async (
 
 async function run(): Promise<void> {
   try {
-    await client.connect();
+    // await client.connect();
 
     const db = client.db(process.env.DB);
     const courtsCollection: Collection<Court> = db.collection<Court>("courts");
@@ -244,7 +244,7 @@ async function run(): Promise<void> {
       }
     );
 
-    await client.db("admin").command({ ping: 1 });
+    // await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
